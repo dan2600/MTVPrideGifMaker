@@ -21,46 +21,41 @@ function makeCard() {
     }, function(obj) {
         if (!obj.error) {
             var image = obj.image,
-            animatedImage = document.createElement('img');
+                animatedImage = document.createElement('img');
             animatedImage.src = image;
             animatedImage.className += "resultgif";
             document.getElementsByClassName("result")[0].innerHTML = "";
             document.getElementsByClassName("result")[0].appendChild(animatedImage);
-                               document.getElementsByClassName("result")[0].appendChild(document.createElement("br"))
-            var node = document.createElement("button");                 // Create a <li> node
+            document.getElementsByClassName("result")[0].appendChild(document.createElement("br"))
+            var node = document.createElement("button"); // Create a <li> node
             var textnode = document.createTextNode("Download Image");
             node.appendChild(textnode);
-            node.onclick = function() {downloadURI(image, "pride.gif")};  
+            node.onclick = function() { downloadURI(image, "pride.gif") };
             document.getElementsByClassName("result")[0].appendChild(node);
 
-            
+
         }
     });
 
 }
 
 function downloadURI(uri, name) {
-  var link = document.createElement("a");
-  link.download = name;
-  link.href = uri;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-  delete link;
+    var link = document.createElement("a");
+    link.download = name;
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    delete link;
 }
-
 
 //Makes the Rainbow Effect and Applies Text
 function rainbowmaker(context, shift) {
-    function ander(s)
-    {
-        if(s !== "")
-        {
+    function ander(s) {
+        if (s !== "") {
             return "&";
-        }
-        else
-        {
-            return "";
+        } else {
+            return;
         }
     }
 
@@ -75,12 +70,10 @@ function rainbowmaker(context, shift) {
         context.fillStyle = blockColor;
         context.fillRect(0, 78.33 * z, 470, 78.33);
         context.fillStyle = "#000";
-        if(z === 5)
-        {
-         context.font = "26.5px Arial";   
-        }
-        else{
-        context.font = "50px Arial";
+        if (z === 5) {
+            context.font = "26.5px Arial";
+        } else {
+            context.font = "50px Arial";
         }
         context.fillText(words[z], 25, (78.33 * (z + 1)) - 25);
     }
