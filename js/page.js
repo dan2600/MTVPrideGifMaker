@@ -31,6 +31,7 @@ function makeCard() {
             var textnode = document.createTextNode("Download Image");
             node.appendChild(textnode);
             node.onclick = function() { downloadURI(image, "pride.gif") };
+            node.className += "btn";
             document.getElementsByClassName("result")[0].appendChild(node);
 
 
