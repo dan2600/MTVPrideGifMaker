@@ -75,6 +75,9 @@ function rainbowmaker(context, shift) {
         } else {
             context.font = "50px Arial";
         }
+        if(words[z])
+        {
         context.fillText(words[z], 25, (78.33 * (z + 1)) - 25);
+        }
     }
 }
