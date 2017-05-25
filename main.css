@@ -1,11 +1,5 @@
-@font-face {
-	font-family: 'berthhold';
-	src: url('berthhold.otf');
-}
-
-
 body{
-	font-family: 'berthhold', 'Arial', sans-serif;
+	font-family: 'Arial', sans-serif;
 }
 
 .wrap {
@@ -21,12 +15,9 @@ body{
 }
 
 .btn {
-
-	    background: transparent;
-font-family: 'berthhold', 'Arial', sans-serif;
+  font-family: Arial;
   color: #000000;
   font-size: 20px;
-  margin-top: 10px;
   padding: 10px 20px 10px 20px;
   border: solid #000000 4px;
   text-decoration: none;
@@ -34,31 +25,10 @@ font-family: 'berthhold', 'Arial', sans-serif;
 
 .btn:hover {
 	color: #FFF;
-	background-color: #000;
-      -webkit-animation: fadeIt .3s ease-in-out; 
-       -moz-animation: fadeIt .3s ease-in-out; 
-         -o-animation: fadeIt .3s ease-in-out; 
-            animation: fadeIt .3s ease-in-out; 
+  background: #000000;
   text-decoration: none;
 }
 
-
-@-webkit-keyframes fadeIt {
-  0%   { background-color: transparent }
-  100% { background-color: #000; }
-}
-@-moz-keyframes fadeIt {
-  0%   { background-color: transparent }
-  100% { background-color: #000; }
-}
-@-o-keyframes fadeIt {
-  0%   { background-color: transparent }
-  100% { background-color: #000; }
-}
-@keyframes fadeIt {
-  0%   { background-color: transparent }
-  100% { background-color: #000; }
-}
 
 .resultgif {
     -webkit-animation: fadein 2s;
